@@ -23,8 +23,12 @@ h1 {
     font-size: 2.5rem;
 }
 
-/* Style icônes réseaux */
-.social {
+.article { /* Disposition des éléments de l'article */
+    text-align: center;
+    background-color: pink;
+}
+
+.social { /* Style icônes réseaux */
     padding: 0.5rem 1rem;
     color: white;
     background-color: #4c1d95;

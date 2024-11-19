@@ -1,9 +1,12 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleDisplay from "../layouts/ArticleDisplay.astro";
+import MarkdownPostLayout from "../layouts/MarkdownPostLayout.astro";
 
-const pageTitle = "AS.Giberville - Basketball"
+const allArticles = await Astro.glob("./articles/*.md");
+const pageTitle = "AS.Giberville - Basketball";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-
+	<ArticleDisplay />
 </BaseLayout>

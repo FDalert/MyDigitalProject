@@ -1,0 +1,11 @@
+---
+const allArticles = await Astro.glob("../pages/articles/*.md");
+---
+
+{
+    allArticles.map((item) => (
+        <div class="article">
+            <item.Content />
+        </div>
+    ))
+}
