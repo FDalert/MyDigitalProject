@@ -1,4 +1,4 @@
 ---
 const { platform, username } = Astro.props;
 ---
-<a href={`https://www.${platform}.com/${username}`} target="_blank" class="social">{platform}</a>
+<a href={`https://www.${platform}.com/${username}`} target="_blank" class="social"><img src={'../images/${platform}.jpeg'}>{platform}</a>
