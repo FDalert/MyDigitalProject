@@ -5,12 +5,8 @@ import MarkdownPostLayout from "../layouts/MarkdownPostLayout.astro";
 
 const allArticles = await Astro.glob("./articles/*.md");
 const pageTitle = "AS.Giberville - Basketball";
-
-const platform = "Instagram";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<ArticleDisplay />
-	<img src="../images/Instagram.jpeg" alt="Instagram Logo" width="50" height="60"> 
-	<img src='../images/Instagram.jpeg'>
 </BaseLayout>
