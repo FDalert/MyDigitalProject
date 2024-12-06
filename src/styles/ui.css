@@ -2,7 +2,9 @@
 .tooltip-container {
     background: rgb(3, 169, 244);
     background: linear-gradient(138deg, rgb(0, 0, 0) 15%, rgb(0, 31, 46) 65%);
-    position: relative;
+    position: fixed;
+    right: 25px;
+    bottom: 50%;
     cursor: pointer;
     font-size: 17px;
     padding: 0.7em 0.7em;
@@ -24,42 +26,41 @@
     align-items: center;
     justify-content: center;
     fill: #fff;
+    stroke: #ffffff;
     transition: all 0.2s;
 }
 
 .tooltip-container:hover .text {
+    stroke: #000;
     fill: rgb(0, 0, 0);
     transition: all 0.9s;
 }
 
-
-
-
-
-/* Inicio do tooltip Discord */
+/* Tooltip Shop */
 .tooltipShop {
     position: absolute;
-    top: 100%;
-    left: -165%;
-    transform: translateX(70%);
+    top: 8%;
+    left: 100%;
+    transform: translateX(50%);
     opacity: 0;
     visibility: hidden;
     background: #fff;
     fill: #001722;
     padding: 10px;
     border-radius: 50px;
-    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    transition: opacity 0.3s, visibility 0.3s, left 0.3s, background 0.3s;
     z-index: 1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tooltip-container:hover .tooltipShop {
-    top: 10%;
+    top: 8%;
     opacity: 1;
     stroke: #000;
     visibility: visible;
     background: #fff;
-    transform: translate(70%, -5px);
+    left: -50px;
+    transform: translateX(0);
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -67,35 +68,36 @@
 }
 
 .tooltip-container:hover .tooltipShop:hover {
-    background-image: "../images/logo.png";
+    background: #001722;
     stroke: #fff;
 }
 
-/* Fim do tooltip Discord */
+/* ------------------------------------------ */
 
 /* Tooltip Facebook */
 .tooltipFacebook {
     position: absolute;
-    top: 100%;
-    left: -130%;
-    transform: translateX(70%);
+    top: -88%;
+    left: 100%;
+    transform: translateX(50%);
     opacity: 0;
     visibility: hidden;
     background: #fff;
     fill: #001722;
     padding: 10px;
     border-radius: 50px;
-    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    transition: opacity 0.3s, visibility 0.3s, left 0.3s, background 0.3s;
     z-index: 1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tooltip-container:hover .tooltipFacebook {
-    top: -78%;
+    top: -88%;
     opacity: 1;
     visibility: visible;
     background: #fff;
-    transform: translate(70%, -5px);
+    left: -25px;
+    transform: translateX(0);
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -106,21 +108,22 @@
     background: #4c66a3;
     fill: #fff;
 }
+
 /* ------------------------------------------ */
 
-/* Inicio do tooltip reddit */
+/* Tooltip Instagram */
 .tooltipInstagram {
     position: absolute;
-    top: 100%;
-    left: -130%;
-    transform: translateX(70%);
+    top: 101%;
+    left: 100%;
+    transform: translateX(50%);
     opacity: 0;
     visibility: hidden;
     background: #fff;
     fill: #001722;
     padding: 10px;
     border-radius: 50px;
-    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    transition: opacity 0.3s, visibility 0.3s, left 0.3s, background 0.3s;
     z-index: 1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -130,7 +133,8 @@
     opacity: 1;
     visibility: visible;
     background: #fff;
-    transform: translate(70%, -5px);
+    left: -25px;
+    transform: translateX(0);
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -138,13 +142,14 @@
 }
 
 .tooltip-container:hover .tooltipInstagram:hover {
-    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background: linear-gradient(45deg, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #ffcf54);
     fill: #fff;
 }
 
-/* Fim do tooltip reddit */
+/* ------------------------------------------ */
 
-/* Inicio do tooltip fixo */
+
+/* Tooltip fixe */
 .tooltip9 {
     position: absolute;
     top: 0;
