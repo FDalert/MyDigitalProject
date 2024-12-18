@@ -16,7 +16,7 @@ const sortedArticles = filteredArticles.sort((a, b) => {
     const dateA = new Date(a.frontmatter.pubDate);
     const dateB = new Date(b.frontmatter.pubDate);
 
-    return dateB - dateA;
+    return dateB.getTime() - dateA.getTime();
 });
 ---
 

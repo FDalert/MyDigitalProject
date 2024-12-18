@@ -1,0 +1,27 @@
+a {
+    color: white;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: cyan;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.tag {
+    margin: 0.25em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: red;
+}
+
+.uniqueArticle {
+    width: auto;
+    text-align: center;
+    background-color: pink;
+    box-sizing: border-box;
+}
