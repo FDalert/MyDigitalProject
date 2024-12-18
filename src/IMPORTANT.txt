@@ -1,2 +1,10 @@
 formulaire d'inscription -> renvoi google sheets
 n8n
+
+
+npm create astro@latest
+
+cd /home/felixd/Documents/MyDigitalProject
+npm run dev
+
+npm run astro preferences disable devToolbar
