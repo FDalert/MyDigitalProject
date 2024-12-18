@@ -1,11 +1,32 @@
 ---
+import Tag from "../pages/tags/[tag].astro";
+import "../styles/article.css";
 const allArticles = await Astro.glob("../pages/articles/*.md");
+const tag = Astro.props.tag;
+
+var filteredArticles = allArticles;
+if (tag) {
+    filteredArticles = allArticles.filter((article) =>
+        article.frontmatter.tags.includes(tag),
+    );
+}
+
+// Trier les articles par date (du plus récent au plus ancien)
+const sortedArticles = filteredArticles.sort((a, b) => {
+    const dateA = new Date(a.frontmatter.pubDate);
+    const dateB = new Date(b.frontmatter.pubDate);
+
+    return dateB - dateA;
+});
 ---
 
-{
-    allArticles.map((item) => (
-        <div class="article">
-            <item.Content />
-        </div>
-    ))
-}
+<slot />
+<div class="articleContainer">
+    {
+        sortedArticles.map((item) => (
+            <div class="article">
+                <item.Content />
+            </div>
+        ))
+    }
+</div>

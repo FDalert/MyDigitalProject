@@ -1,0 +1,25 @@
+---
+const allArticles = await Astro.glob("../pages/articles/*.md");
+import "../styles/global.css";
+---
+
+<div class="containerTest">
+{
+    allArticles.map((item) => (
+        <div class="article">
+            <item.Content />
+        </div>
+    ))
+}
+</div>
+
+<style>
+
+.containerTest {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+</style>

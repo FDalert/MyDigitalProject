@@ -8,10 +8,8 @@ body {
     width: 100%;
     padding: 1rem;
     line-height: 1.5;
-}
 
-header {
-    text-align: center;
+    background-color: lime;
 }
 
 * {
@@ -23,12 +21,8 @@ h1 {
     font-size: 2.5rem;
 }
 
-.article { /* Disposition des éléments de l'article */
-    text-align: center;
-    background-color: pink;
-}
-
-.social { /* Style icônes réseaux */
+.social {
+    /* Style icônes réseaux */
     padding: 0.5rem 1rem;
     color: white;
     background-color: #4c1d95;
@@ -94,6 +88,7 @@ a:focus {
         display: none;
     }
 }
+
 /* ---------------- */
 
 /* Theme sombre */
