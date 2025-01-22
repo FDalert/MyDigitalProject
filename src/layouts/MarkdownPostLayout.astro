@@ -1,8 +1,9 @@
 ---
 const { frontmatter } = Astro.props;
+import "../styles/tagIndex.css";
 ---
 
-<h1>{frontmatter.title}</h1>
+<h2>{frontmatter.title}</h2>
 <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
 <p><em>{frontmatter.description}</em></p>
 <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
@@ -17,24 +18,3 @@ const { frontmatter } = Astro.props;
 </div>
 <slot />
 
-<style>
-    a {
-        color: #00539f;
-    }
-
-    .tags {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: fit-content;
-    }
-
-    .tag {
-        margin: 0.25em;
-        border: dotted 1px #a1a1a1;
-        border-radius: 0.5em;
-        padding: 0.5em 1em;
-        font-size: 1.15em;
-        background-color: #f8fcfd;
-    }
-</style>

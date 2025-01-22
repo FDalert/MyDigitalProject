@@ -2,8 +2,16 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 
 const pageTitle = "Partenaires - AS.Giberville Basketball";
+
+import iso from "../images/logoIso.avif";
+import mairie from "../images/logoMairie.avif";
+import distidrinks from "../images/logoDisti-drinks.avif";
+import departement from "../images/logoDepartement.png";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-
+    <a href="https://www.isodecocaen.com/" target="_blank"><img src={iso.src}></a>
+    <a href="https://giberville.fr/" target="_blank"><img src={mairie.src}></a>
+    <a href="https://www.distri-drinks.com/" target="_blank"><img src={distidrinks.src}></a>
+    <a href="https://www.calvados.fr/accueil.html/" target="_blank"><img src={departement.src}></a>
 </BaseLayout>

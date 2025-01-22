@@ -16,7 +16,7 @@ const pageTitle = "Articles - AS.Giberville Basketball";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>Rechercher des articles par thème</p>
+    <h1>Rechercher des articles par thème</h1>
     <div class="tags">
         {
             tags.map((tag) => (
@@ -26,7 +26,7 @@ const pageTitle = "Articles - AS.Giberville Basketball";
             ))
         }
     </div>
-<p>Articles récents</p>
+<h1>Articles récents</h1>
     {
         sortedArticles.map((item) => (
             <div class="uniqueArticle">
