@@ -1,10 +1,4 @@
-@font-face {
-    font-family: 'Satoshi';
-    src: url('/fonts/Satoshi-Regular.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+@import url("satoshi.css");
 
 html {
     background-color: #f1f5f9;
