@@ -2,9 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ArticleDisplay from "../layouts/ArticleDisplay.astro";
 import MarkdownPostLayout from "../layouts/MarkdownPostLayout.astro";
+import Overview from "../components/Overview.astro";
+import Events from "../components/Events.astro";
+import Actus from "../components/Actus.astro";
+import Partenaires from "../components/Partenaires.astro";
 import "../styles/index.css";
 
-const allArticles = await Astro.glob("./articles/*.md");
 const pageTitle = "Accueil - AS.Giberville Basketball";
 ---
 
@@ -13,16 +16,9 @@ const pageTitle = "Accueil - AS.Giberville Basketball";
 		<h1>AS GIBERVILLE</h1>
 		<h1>Basket</h1>
 	</div>
-	<div class="separator"></div>
-	<div class="presentation">
-		<img class="big-picture" src="/src/images/logo.png" alt="Logo de l'AS.Giberville Basketball" />
-		<div class="presentation-row2">
-			<img src="/src/images/logo.png" alt="Logo de l'AS.Giberville Basketball" />
-			<img src="/src/images/logo.png" alt="Logo de l'AS.Giberville Basketball" />
-		</div>
-		<div class="presentation-row3">
-			<h1>L'AS GIBERVILLE Basket</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<button>En savoir plus</button>
-	</div>
+
+	<Overview />
+	<Events />
+	<Actus />
+	<Partenaires />
 </BaseLayout>

@@ -4,9 +4,9 @@ title: 'Image test'
 pubDate: '2025-01-08'
 description: 'To test a picture-less post'
 image:
-    url: ''
+    url: '/src/images/logoMairie.avif'
     alt: 'Imaaaaaage.'
-tags: ["basketball", "test", "image"]
+tags: ["basketball", "test", "image", "évènement"]
 ---
 
 ## test

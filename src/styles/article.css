@@ -1,7 +1,5 @@
 .article {
     /* Disposition des éléments de l'article */
-    width: 48%; /* Prend 48% de la largeur de son conteneur */
-    margin: 1%; /* Un petit espace entre les articles */
     text-align: center;
     background-color: pink;
     box-sizing: border-box; /* Assure que la largeur inclut les marges */
@@ -9,7 +7,7 @@
 
 .articleContainer {
     display: flex;
-    flex-wrap: wrap; /* Permet aux articles de passer à la ligne suivante si nécessaire */
+    flex-wrap: nowrap; /* Permet aux articles de passer à la ligne suivante si nécessaire */
     justify-content: space-between; /* Ajoute de l'espace entre les articles */
     width: 100%;
 }

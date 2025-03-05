@@ -1,8 +1,8 @@
 ---
-import Tag from "../pages/tags/[tag].astro";
 import "../styles/article.css";
 const allArticles = await Astro.glob("../pages/articles/*.md");
 const tag = Astro.props.tag;
+const qty = Astro.props.quantity;
 
 var filteredArticles = allArticles;
 if (tag) {
@@ -12,12 +12,15 @@ if (tag) {
 }
 
 // Trier les articles par date (du plus récent au plus ancien)
-const sortedArticles = filteredArticles.sort((a, b) => {
+var sortedArticles = filteredArticles.sort((a, b) => {
     const dateA = new Date(a.frontmatter.pubDate);
     const dateB = new Date(b.frontmatter.pubDate);
 
     return dateB.getTime() - dateA.getTime();
 });
+
+// Limiter le nombre d'articles affichés
+sortedArticles = qty ? sortedArticles.slice(0, qty) : sortedArticles;
 ---
 
 <slot />
